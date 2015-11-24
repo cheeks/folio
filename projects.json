@@ -7,6 +7,11 @@
 	{
 		"title": "Bits of Brilliance",
 		"client": "Kibbles 'n Bits",
-		"description": "Award site for ad campaigns that use Facebook technologies",
+		"description": "We let the dog people of the internet create voiceovers for some short clips of their furry best friends.",
+	},
+	{
+		"title": "Pizza Proverbs",
+		"client": "Domino's Pizza",
+		"description": "Crowdsourced clever proverbs for Domino's Pizza boxes and let the internet decide which were best via a voting system.",
 	}
 ]

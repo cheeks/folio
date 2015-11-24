@@ -31445,7 +31445,12 @@ module.exports=[
 	{
 		"title": "Bits of Brilliance",
 		"client": "Kibbles 'n Bits",
-		"description": "Award site for ad campaigns that use Facebook technologies",
+		"description": "We let the dog people of the internet create voiceovers for some short clips of their furry best friends.",
+	},
+	{
+		"title": "Pizza Proverbs",
+		"client": "Domino's Pizza",
+		"description": "Crowdsourced clever proverbs for Domino's Pizza boxes and let the internet decide which were best via a voting system.",
 	}
 ]
 },{}],161:[function(require,module,exports){
@@ -31496,7 +31501,7 @@ var ProjectTile = (function (_React$Component) {
 	_createClass(ProjectTile, [{
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', null, React.createElement('h1', null, this.props.title), React.createElement('h2', null, this.props.client), React.createElement('p', null, this.props.description));
+			return React.createElement('div', { className: 'col-xs-12 col-sm-6 col-md-4' }, React.createElement('h1', null, this.props.title), React.createElement('h2', null, this.props.client), React.createElement('p', null, this.props.description));
 		}
 	}]);
 

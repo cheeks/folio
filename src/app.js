@@ -10,7 +10,7 @@ class ProjectTile extends React.Component {
 	}
 	render () {
 		return (
-			<div>
+			<div className="col-xs-12 col-sm-6 col-md-4">
 				<h1>{this.props.title}</h1>
 				<h2>{this.props.client}</h2>
 				<p>{this.props.description}</p>
