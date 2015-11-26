@@ -1,17 +1,65 @@
 [
 	{
-		"title": "Facebook Awards",
-		"client": "Facebook",
-		"description": "Award site for ad campaigns that use Facebook technologies",
+		"title": "Brand Site",
+		"client": "Noosa Yoghurt",
+		"description": "Brand site, flavor gallery and store locator for Noosa Yoghurt.",
+		"image": "noosa.jpg",
+		"url": "http://www.noosayoghurt.com/"
 	},
 	{
-		"title": "Bits of Brilliance",
-		"client": "Kibbles 'n Bits",
-		"description": "We let the dog people of the internet create voiceovers for some short clips of their furry best friends.",
+		"title": "Facebook Studio Awards",
+		"client": "Facebook",
+		"description": "Award site for ad campaigns that use Facebook technologies.",
+		"image": "facebook-studio.jpg",
+		"url": "http://www.facebook-studio.com/"
+	},
+	{
+		"title": "Agency Portfolio",
+		"client": "EVB",
+		"description": "A rebooted portfolio site to go with the new branding EVB had adopted.",
+		"image": "evb.png",
+		"url": "http://www.evb.com/"
+	},
+	{
+		"title": "VC Firm Portfolio",
+		"client": "Venrock",
+		"description": "A portfolio for a venture capital firm.",
+		"image": "venrock.png",
+		"url": "http://www.venrock.com/"
 	},
 	{
 		"title": "Pizza Proverbs",
 		"client": "Domino's Pizza",
 		"description": "Crowdsourced clever proverbs for Domino's Pizza boxes and let the internet decide which were best via a voting system.",
+		"image": "pizza-proverbs.jpg",
+		"url": ""
+	},
+	{
+		"title": "OPEN Forum",
+		"client": "American Express",
+		"description": "A place for small business owners to share advice and learnings.",
+		"image": "open-forum.jpg",
+		"url": "http://www.openforum.com/"
+	},
+	{
+		"title": "Bits of Brilliance",
+		"client": "Kibbles 'n Bits",
+		"description": "Where dog-people of the internet can create voiceovers for short clips of their furry friends.",
+		"image": "bits-of-brilliance.png",
+		"url": "http://sharethebits.kibblesnbits.com/"
+	},
+	{
+		"title": "Fantasy Redemption",
+		"client": "NFL",
+		"description": "The NFL gave all the fantasy season losers a chance to get their likeness featured in a TV spot, and one winner to get sent to the Super Bowl.",
+		"image": "fantasy-redemption.jpg",
+		"url": ""
+	},
+	{
+		"title": "After The Wild Life",
+		"client": "GLAD",
+		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
+		"image": "black-bag.jpg",
+		"url": ""
 	}
 ]

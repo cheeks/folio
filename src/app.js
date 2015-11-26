@@ -10,11 +10,16 @@ class ProjectTile extends React.Component {
 	}
 	render () {
 		return (
-			<div className="col-xs-12 col-sm-6 col-md-4">
-				<h1>{this.props.title}</h1>
-				<h2>{this.props.client}</h2>
-				<p>{this.props.description}</p>
-			</div>
+			<a href="" className="tile col-xs-12 col-sm-6 col-md-4">
+				<figure>
+					<div className="photo" style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}></div>
+					<figcaption className="caption">
+						<h2>{this.props.data.client}</h2>
+						<h1>{this.props.data.title}</h1>
+						<p>{this.props.data.description}</p>
+					</figcaption>
+				</figure>
+			</a>
 		);
 	}
 };
@@ -31,13 +36,11 @@ class ProjectGallery extends React.Component {
 		return (
 			<div className="projects">
 				{this.state.projects.map((el) => {
-					return (
-						<ProjectTile
-							title={el.title}
-							client={el.client}
-							description={el.description}
-							key={el.title}
-						/>
+					return ( 
+						<ProjectTile 
+							data={el} 
+							key={el.title} 
+						/> 
 					);
 				})}
 			</div>

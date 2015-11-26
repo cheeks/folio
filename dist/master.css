@@ -1055,7 +1055,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5192,7 +5192,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5305,7 +5305,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5820,3 +5820,36 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+#target .tile {
+  position: relative;
+  margin-bottom: 2em;
+  overflow: hidden;
+  text-decoration: none; }
+
+#target .photo {
+  background-size: 100%;
+  padding-top: 60%;
+  background-position: 50% 0%;
+  background-repeat: no-repeat; }
+
+#target .caption {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  color: #eee;
+  padding: 15px 10px; }
+  #target .caption h1, #target .caption h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 4vw;
+    display: inline-block; }
+    @media screen and (min-width: 768px) {
+      #target .caption h1, #target .caption h2 {
+        font-size: 1.25em; } }
+  #target .caption h2 {
+    font-weight: 800;
+    display: inline-block;
+    margin-right: 0.420em; }
+    #target .caption h2:after {
+      content: ': '; }

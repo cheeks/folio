@@ -14,6 +14,7 @@ var buffer = require('vinyl-buffer');
 var watchify = require('watchify');
 var merge = require('utils-merge');
 var duration = require('gulp-duration');
+var sass = require('gulp-sass');
 
 var config = {
 	js: {
@@ -56,8 +57,16 @@ function bundle (bundler) {
 		.pipe(livereload());
 }
 
+gulp.task('sass', function () {
+  gulp.src('./src/**/master.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('default', function () {
 	livereload.listen();
+
+	gulp.watch('./src/**/*.scss', ['sass']);
 
 	var args = merge(watchify.args, {debug: true});
 
