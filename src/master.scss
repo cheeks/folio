@@ -3,39 +3,68 @@
 #target {
 	.tile {
 		position: relative;
-		margin-bottom: 2em;
+		// margin-bottom: 2em;
 		overflow: hidden;
 		text-decoration: none;
 	}
 	.photo {
+		padding-top: 63.8%;
+		@media screen and (min-width: $screen-sm-min) {
+			padding-top: 32%;	
+		}
+		@media screen and (min-width: $screen-lg-min) {
+			padding-top: 21.3%;
+		}
 		background-size: 100%;
-		padding-top: 60%;
-		background-position: 50% 0%;
+		background-position: 50% 50%;
 		background-repeat: no-repeat;
+		transition: background-size 300ms ease;
+		&:hover {
+			background-size: 120%;
+		}
+	}
+	.vignette {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.15);
 	}
 	.caption {
-		position: relative;
-		background: rgba(0,0,0,0.8);
-		height: 100%;
-		color: #eee;
-		// color: #333;
-	    padding: 15px 10px;
-		h1, h2 {
-			margin: 0;
-			font-weight: 600;
-			font-size: 4vw;
-			display: inline-block;
-			@media screen and (min-width: $screen-sm-min) {
-				font-size: 1.25em;
-			}
+		position: absolute;
+		color: #333;
+		& > * {
+		    padding: 15px 10px;
 		}
-		h2 {
+	    %headline {
+	    	display: inline-block;
+			font-size: 4vw;
+			@media screen and (min-width: $screen-sm-min) {
+				font-size: 2vw;
+			}
+	    }
+	    .link-out {
+	    	display: block;
+	    	&:after {
+	    		content: ' >'
+	    	}
+	    }
+		h1 {
+			@extend %headline;
+			margin: 0 0.420em 0 0;
 			font-weight: 800;
-			display: inline-block;
-			margin-right: 0.420em;
 			&:after {
 				content: ': '
 			}
+		}
+		h2 {
+			@extend %headline;
+			margin: 0;
+			font-weight: 600;
+		}
+		p {
+			height: 60px;
 		}
 	}
 	

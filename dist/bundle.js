@@ -31438,64 +31438,71 @@ module.exports = require('./lib/React');
 },{"./lib/React":54}],160:[function(require,module,exports){
 module.exports=[
 	{
-		"title": "Brand Site",
 		"client": "Noosa Yoghurt",
+		"title": "Brand Site",
 		"description": "Brand site, flavor gallery and store locator for Noosa Yoghurt.",
-		"image": "noosa.jpg",
+		"image": "noosa-yoghurt.png",
 		"url": "http://www.noosayoghurt.com/"
 	},
 	{
-		"title": "Facebook Studio Awards",
 		"client": "Facebook",
+		"title": "Facebook Studio Awards",
 		"description": "Award site for ad campaigns that use Facebook technologies.",
-		"image": "facebook-studio.jpg",
+		"image": "facebook-studio.png",
 		"url": "http://www.facebook-studio.com/"
 	},
 	{
-		"title": "Agency Portfolio",
 		"client": "EVB",
+		"title": "Agency Portfolio",
 		"description": "A rebooted portfolio site to go with the new branding EVB had adopted.",
 		"image": "evb.png",
 		"url": "http://www.evb.com/"
 	},
 	{
-		"title": "VC Firm Portfolio",
+		"client": "Bolt Threads",
+		"title": "Brand Site",
+		"description": "A portfolio for a venture capital firm.",
+		"image": "bolt-threads.png",
+		"url": "http://www.boltthreads.com/"
+	},
+	{
 		"client": "Venrock",
+		"title": "VC Firm Portfolio",
 		"description": "A portfolio for a venture capital firm.",
 		"image": "venrock.png",
 		"url": "http://www.venrock.com/"
 	},
 	{
-		"title": "Pizza Proverbs",
 		"client": "Domino's Pizza",
+		"title": "Pizza Proverbs",
 		"description": "Crowdsourced clever proverbs for Domino's Pizza boxes and let the internet decide which were best via a voting system.",
 		"image": "pizza-proverbs.jpg",
 		"url": ""
 	},
 	{
-		"title": "OPEN Forum",
 		"client": "American Express",
+		"title": "OPEN Forum",
 		"description": "A place for small business owners to share advice and learnings.",
 		"image": "open-forum.jpg",
 		"url": "http://www.openforum.com/"
 	},
 	{
-		"title": "Bits of Brilliance",
 		"client": "Kibbles 'n Bits",
+		"title": "Bits of Brilliance",
 		"description": "Where dog-people of the internet can create voiceovers for short clips of their furry friends.",
 		"image": "bits-of-brilliance.png",
 		"url": "http://sharethebits.kibblesnbits.com/"
 	},
 	{
-		"title": "Fantasy Redemption",
 		"client": "NFL",
+		"title": "Fantasy Redemption",
 		"description": "The NFL gave all the fantasy season losers a chance to get their likeness featured in a TV spot, and one winner to get sent to the Super Bowl.",
 		"image": "fantasy-redemption.jpg",
 		"url": ""
 	},
 	{
-		"title": "After The Wild Life",
 		"client": "GLAD",
+		"title": "After The Wild Life",
 		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
 		"image": "black-bag.jpg",
 		"url": ""
@@ -31547,9 +31554,18 @@ var ProjectTile = (function (_React$Component) {
 	}
 
 	_createClass(ProjectTile, [{
+		key: 'generateCaption',
+		value: function generateCaption() {
+			if (this.props.data.url !== '') {
+				return React.createElement('a', { className: 'link-out', href: this.props.data.url, target: '_blank' }, React.createElement('h1', null, this.props.data.client), React.createElement('h2', null, this.props.data.title));
+			} else {
+				return React.createElement('div', null, React.createElement('h1', null, this.props.data.client), React.createElement('h2', null, this.props.data.title));
+			}
+		}
+	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement('a', { href: '', className: 'tile col-xs-12 col-sm-6 col-md-4' }, React.createElement('figure', null, React.createElement('div', { className: 'photo', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }), React.createElement('figcaption', { className: 'caption' }, React.createElement('h2', null, this.props.data.client), React.createElement('h1', null, this.props.data.title), React.createElement('p', null, this.props.data.description))));
+			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-lg-4', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('div', { className: 'vignette' }), React.createElement('footer', { className: 'caption' }, this.generateCaption()));
 		}
 	}]);
 
@@ -31578,7 +31594,7 @@ var ProjectGallery = (function (_React$Component2) {
 			return React.createElement('div', { className: 'projects' }, this.state.projects.map(function (el) {
 				return React.createElement(ProjectTile, {
 					data: el,
-					key: el.title
+					key: el.title + ' - ' + el.client
 				});
 			}));
 		}

@@ -8,18 +8,31 @@ class ProjectTile extends React.Component {
 	constructor (props) {
 		super(props);
 	}
+	generateCaption () {
+		if (this.props.data.url !== '') {
+			return (
+				<a className="link-out" href={this.props.data.url} target="_blank">
+					<h1>{this.props.data.client}</h1>
+					<h2>{this.props.data.title}</h2>
+				</a>
+			);
+		} else {
+			return (
+				<div>
+					<h1>{this.props.data.client}</h1>
+					<h2>{this.props.data.title}</h2>
+				</div>
+			);
+		}
+	}
 	render () {
 		return (
-			<a href="" className="tile col-xs-12 col-sm-6 col-md-4">
-				<figure>
-					<div className="photo" style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}></div>
-					<figcaption className="caption">
-						<h2>{this.props.data.client}</h2>
-						<h1>{this.props.data.title}</h1>
-						<p>{this.props.data.description}</p>
-					</figcaption>
-				</figure>
-			</a>
+			<div className="tile photo col-xs-12 col-sm-6 col-lg-4"  style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}>
+				<div className="vignette"></div>
+				<footer className="caption">
+					{this.generateCaption()}
+				</footer>
+			</div>
 		);
 	}
 };
@@ -39,7 +52,7 @@ class ProjectGallery extends React.Component {
 					return ( 
 						<ProjectTile 
 							data={el} 
-							key={el.title} 
+							key={el.title + ' - ' + el.client} 
 						/> 
 					);
 				})}
