@@ -31511,7 +31511,7 @@ module.exports=[
 		"client": "Bolt Threads",
 		"title": "Brand Site",
 		"description": "A portfolio for a venture capital firm.",
-		"image": "bolt-threads2.jpg",
+		"image": "bolt-threads6.jpg",
 		"url": "http://www.boltthreads.com/"
 	},
 	{
