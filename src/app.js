@@ -27,11 +27,7 @@ class ProjectTile extends React.Component {
 	}
 	render () {
 		return (
-			<div className="tile photo col-xs-12 col-sm-6 col-lg-4"  style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}>
-				<div className="vignette"></div>
-				<footer className="caption">
-					{this.generateCaption()}
-				</footer>
+			<div className="tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3"  style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}>
 			</div>
 		);
 	}

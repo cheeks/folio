@@ -31441,14 +31441,14 @@ module.exports=[
 		"client": "Noosa Yoghurt",
 		"title": "Brand Site",
 		"description": "Brand site, flavor gallery and store locator for Noosa Yoghurt.",
-		"image": "noosa-yoghurt.png",
+		"image": "noosa-yoghurt.jpg",
 		"url": "http://www.noosayoghurt.com/"
 	},
 	{
 		"client": "Facebook",
 		"title": "Facebook Studio Awards",
 		"description": "Award site for ad campaigns that use Facebook technologies.",
-		"image": "facebook-studio.png",
+		"image": "facebook-studio.jpg",
 		"url": "http://www.facebook-studio.com/"
 	},
 	{
@@ -31459,11 +31459,25 @@ module.exports=[
 		"url": "http://www.evb.com/"
 	},
 	{
+		"client": "Meow Mix",
+		"title": "Cat Starter",
+		"description": "A Kickstarter for cats.",
+		"image": "cat-starter.png",
+		"url": "http://www.meowmix.com/catstarter/"
+	},
+	{
 		"client": "Bolt Threads",
 		"title": "Brand Site",
 		"description": "A portfolio for a venture capital firm.",
 		"image": "bolt-threads.png",
 		"url": "http://www.boltthreads.com/"
+	},
+	{
+		"client": "Wrigley",
+		"title": "Juicy Fruit Sweet Talk",
+		"description": "A portfolio for a venture capital firm.",
+		"image": "sweet-talk.jpeg",
+		"url": "https://play.google.com/store/apps/details?id=com.juicyfruit.sweettalk.prod"
 	},
 	{
 		"client": "Venrock",
@@ -31498,6 +31512,27 @@ module.exports=[
 		"title": "Fantasy Redemption",
 		"description": "The NFL gave all the fantasy season losers a chance to get their likeness featured in a TV spot, and one winner to get sent to the Super Bowl.",
 		"image": "fantasy-redemption.jpg",
+		"url": ""
+	},
+	{
+		"client": "EVB",
+		"title": "Busted App",
+		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
+		"image": "fpo.jpg",
+		"url": ""
+	},
+	{
+		"client": "Sunglass Hut",
+		"title": "Virtual Try-On",
+		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
+		"image": "fpo.jpg",
+		"url": ""
+	},
+	{
+		"client": "College Inn",
+		"title": "Social Kitchen",
+		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
+		"image": "fpo.jpg",
 		"url": ""
 	},
 	{
@@ -31565,7 +31600,7 @@ var ProjectTile = (function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-lg-4', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('div', { className: 'vignette' }), React.createElement('footer', { className: 'caption' }, this.generateCaption()));
+			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } });
 		}
 	}]);
 
