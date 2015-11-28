@@ -31445,6 +31445,13 @@ module.exports=[
 		"url": "http://www.noosayoghurt.com/"
 	},
 	{
+		"client": "Sunglass Hut",
+		"title": "Virtual Try-On",
+		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
+		"image": "sgh-try-on2.jpg",
+		"url": ""
+	},
+	{
 		"client": "Facebook",
 		"title": "Facebook Studio Awards",
 		"description": "Award site for ad campaigns that use Facebook technologies.",
@@ -31455,22 +31462,22 @@ module.exports=[
 		"client": "EVB",
 		"title": "Agency Portfolio",
 		"description": "A rebooted portfolio site to go with the new branding EVB had adopted.",
-		"image": "evb.png",
+		"image": "evb.jpg",
 		"url": "http://www.evb.com/"
 	},
 	{
 		"client": "Meow Mix",
 		"title": "Cat Starter",
 		"description": "A Kickstarter for cats.",
-		"image": "cat-starter.png",
+		"image": "cat-starter.jpg",
 		"url": "http://www.meowmix.com/catstarter/"
 	},
 	{
-		"client": "Bolt Threads",
-		"title": "Brand Site",
-		"description": "A portfolio for a venture capital firm.",
-		"image": "bolt-threads.png",
-		"url": "http://www.boltthreads.com/"
+		"client": "Kibbles 'n Bits",
+		"title": "Bits of Brilliance",
+		"description": "Where dog-people of the internet can create voiceovers for short clips of their furry friends.",
+		"image": "bits-of-brilliance.jpg",
+		"url": "http://sharethebits.kibblesnbits.com/"
 	},
 	{
 		"client": "Wrigley",
@@ -31483,14 +31490,14 @@ module.exports=[
 		"client": "Venrock",
 		"title": "VC Firm Portfolio",
 		"description": "A portfolio for a venture capital firm.",
-		"image": "venrock.png",
+		"image": "venrock.jpg",
 		"url": "http://www.venrock.com/"
 	},
 	{
 		"client": "Domino's Pizza",
 		"title": "Pizza Proverbs",
 		"description": "Crowdsourced clever proverbs for Domino's Pizza boxes and let the internet decide which were best via a voting system.",
-		"image": "pizza-proverbs.jpg",
+		"image": "pizza-proverbs2.jpg",
 		"url": ""
 	},
 	{
@@ -31501,11 +31508,11 @@ module.exports=[
 		"url": "http://www.openforum.com/"
 	},
 	{
-		"client": "Kibbles 'n Bits",
-		"title": "Bits of Brilliance",
-		"description": "Where dog-people of the internet can create voiceovers for short clips of their furry friends.",
-		"image": "bits-of-brilliance.png",
-		"url": "http://sharethebits.kibblesnbits.com/"
+		"client": "Bolt Threads",
+		"title": "Brand Site",
+		"description": "A portfolio for a venture capital firm.",
+		"image": "bolt-threads2.jpg",
+		"url": "http://www.boltthreads.com/"
 	},
 	{
 		"client": "NFL",
@@ -31515,31 +31522,17 @@ module.exports=[
 		"url": ""
 	},
 	{
-		"client": "EVB",
-		"title": "Busted App",
+		"client": "GLAD",
+		"title": "After The Wild Life",
 		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
-		"image": "fpo.jpg",
-		"url": ""
-	},
-	{
-		"client": "Sunglass Hut",
-		"title": "Virtual Try-On",
-		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
-		"image": "fpo.jpg",
+		"image": "black-bag.jpg",
 		"url": ""
 	},
 	{
 		"client": "College Inn",
 		"title": "Social Kitchen",
 		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
-		"image": "fpo.jpg",
-		"url": ""
-	},
-	{
-		"client": "GLAD",
-		"title": "After The Wild Life",
-		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
-		"image": "black-bag.jpg",
+		"image": "social-kitchen.jpg",
 		"url": ""
 	}
 ]
@@ -31600,7 +31593,7 @@ var ProjectTile = (function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } });
+			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('footer', { className: 'caption' }));
 		}
 	}]);
 
@@ -31629,7 +31622,7 @@ var ProjectGallery = (function (_React$Component2) {
 			return React.createElement('div', { className: 'projects' }, this.state.projects.map(function (el) {
 				return React.createElement(ProjectTile, {
 					data: el,
-					key: el.title + ' - ' + el.client
+					key: el.client + '-' + el.title
 				});
 			}));
 		}
@@ -31640,7 +31633,7 @@ var ProjectGallery = (function (_React$Component2) {
 
 ;
 
-ReactDOM.render(React.createElement(ProjectGallery, null), window.document.querySelector('#target'));
+ReactDOM.render(React.createElement(ProjectGallery, null), window.document.querySelector('#projects'));
 
 },{"../projects.json":160,"lodash":28,"react":159,"react-dom":30}]},{},[161])
 

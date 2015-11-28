@@ -28,6 +28,9 @@ class ProjectTile extends React.Component {
 	render () {
 		return (
 			<div className="tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3"  style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}>
+				<footer className="caption">
+					{ /* this.generateCaption() */ }
+				</footer>
 			</div>
 		);
 	}
@@ -48,7 +51,7 @@ class ProjectGallery extends React.Component {
 					return ( 
 						<ProjectTile 
 							data={el} 
-							key={el.title + ' - ' + el.client} 
+							key={el.client + '-' + el.title} 
 						/> 
 					);
 				})}
@@ -59,5 +62,5 @@ class ProjectGallery extends React.Component {
 
 ReactDOM.render(
 	<ProjectGallery />, 
-	window.document.querySelector('#target')
+	window.document.querySelector('#projects')
 );

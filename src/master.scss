@@ -1,7 +1,7 @@
 @import 'scss/bootstrap-vars';
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 
-#target {
+#projects {
 	.tile {
 		position: relative;
 		// margin-bottom: 2em;
@@ -13,16 +13,17 @@
 		@media screen and (min-width: $screen-sm-min) {
 			padding-top: 32%;	
 		}
+		@media screen and (min-width: $screen-md-min) {
+			padding-top: 26.3%;
+		}
 		@media screen and (min-width: $screen-lg-min) {
-			padding-top: 21.3%;
+			// padding-top: 21.3%;
+			padding-top: 19.8%;
 		}
 		background-size: 100%;
-		background-position: 50% 50%;
+		background-position: 50% 0%;
 		background-repeat: no-repeat;
 		transition: background-size 300ms ease;
-		&:hover {
-			background-size: 105%;
-		}
 	}
 	.vignette {
 		position: absolute;
