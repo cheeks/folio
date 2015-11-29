@@ -31448,8 +31448,8 @@ module.exports=[
 		"client": "Sunglass Hut",
 		"title": "Virtual Try-On",
 		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
-		"image": "sgh-try-on2.jpg",
-		"url": ""
+		"image": "sgh-try-on.jpg",
+		"url": "http://www.sunglasshut.com/us/sunglasses-trends/shop-by-face-shape"
 	},
 	{
 		"client": "Facebook",
@@ -31511,7 +31511,7 @@ module.exports=[
 		"client": "Bolt Threads",
 		"title": "Brand Site",
 		"description": "A portfolio for a venture capital firm.",
-		"image": "bolt-threads6.jpg",
+		"image": "bolt-threads.jpg",
 		"url": "http://www.boltthreads.com/"
 	},
 	{
@@ -31593,7 +31593,7 @@ var ProjectTile = (function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('footer', { className: 'caption' }));
+			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('footer', null, React.createElement('div', { className: 'overlay', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }), React.createElement('div', { className: 'caption' }, React.createElement('div', { className: 'caption-content' }, this.generateCaption()))));
 		}
 	}]);
 

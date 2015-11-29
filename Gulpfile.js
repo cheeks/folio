@@ -15,6 +15,7 @@ var watchify = require('watchify');
 var merge = require('utils-merge');
 var duration = require('gulp-duration');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 var config = {
 	js: {
@@ -60,6 +61,10 @@ function bundle (bundler) {
 gulp.task('sass', function () {
   gulp.src('./src/**/master.scss')
     .pipe(sass.sync().on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(gulp.dest('./dist'));
 });
 
