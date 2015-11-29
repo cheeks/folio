@@ -16,34 +16,41 @@ body {
 	* { font-size: 1.069em; }
 }
 .portrait {
-	background: url('../images/me.jpg') 50% 50%/cover no-repeat;
-	width: 200px;
-	height: 200px;
-	clip-path: circle(60px at center);
+	position: relative;
+	width: 80%;
+	padding-top: 80%;
+	border-radius: 100%;
+	background: url('../images/me.jpg') 50% 50%/140% no-repeat;
 	&::before {
 		content: '';
-		height: 200px;
-		width: 200px;
 		display: block;
-		clip-path: circle(60px at center);
-	    background: hsla(1, 100%, 50%, 0.069);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 100%;
+	    background: hsla(0, 50%, 50%, 0.069);
 	}
-	&:hover::before {
+	&:hover::before,
+	&:focus::before {
 		animation: hue 4s infinite;
 	}
 }
 @keyframes hue {
-  0%  { background: hsla(0, 100%, 50%, 0.069); }
-  10%  { background: hsla(36, 100%, 50%, 0.069); }
-  20%  { background: hsla(72, 100%, 50%, 0.069); }
-  30%  { background: hsla(108, 100%, 50%, 0.069); }
-  40%  { background: hsla(144, 100%, 50%, 0.069); }
-  50%  { background: hsla(180, 100%, 50%, 0.069); }
-  60%  { background: hsla(216, 100%, 50%, 0.069); }
-  70%  { background: hsla(252, 100%, 50%, 0.069); }
-  80%  { background: hsla(288, 100%, 50%, 0.069); }
-  90%  { background: hsla(324, 100%, 50%, 0.069); }
-  100%  { background: hsla(360, 100%, 50%, 0.069); }
+  0%    { background: hsla(0, 50%, 50%, 0.069); }
+  10%   { background: hsla(36, 60%, 50%, 0.069); }
+  20%   { background: hsla(72, 70%, 50%, 0.069); }
+  30%   { background: hsla(108, 80%, 50%, 0.069); }
+  40%   { background: hsla(144, 90%, 50%, 0.069); }
+  50%   { background: hsla(180, 100%, 50%, 0.069); }
+  60%   { background: hsla(216, 90%, 50%, 0.069); }
+  70%   { background: hsla(252, 80%, 50%, 0.069); }
+  80%   { background: hsla(288, 70%, 50%, 0.069); }
+  90%   { background: hsla(324, 60%, 50%, 0.069); }
+  100%  { background: hsla(360, 50%, 50%, 0.069); }
 }
 #projects {
 	.tile {
@@ -54,7 +61,8 @@ body {
 			opacity: 0;
 			transition: opacity 500ms ease;
 		}
-		&:hover {
+		&:hover,
+		&:focus {
 			footer {
 				opacity: 1;
 			}
@@ -63,13 +71,12 @@ body {
 	.photo {
 		padding-top: 63.8%;
 		@media screen and (min-width: $screen-sm-min) {
-			padding-top: 32%;	
+			padding-top: 32%;
 		}
 		@media screen and (min-width: $screen-md-min) {
 			padding-top: 26.3%;
 		}
 		@media screen and (min-width: $screen-lg-min) {
-			// padding-top: 21.3%;
 			padding-top: 19.8%;
 		}
 		background-size: 100%;
@@ -121,13 +128,16 @@ body {
 			color: #fff;
 			text-decoration: none;
 		}
-		& > * {
-		    padding: 15px 10px;
-		}
-	    %headline {
-	    }
 	    .link-out {
-	    	display: block;
+		    display: block;
+		    background: url("../images/visit.svg");
+		    width: 68px;
+		    text-indent: -9999em;
+		    height: 30px;
+		    position: absolute;
+		    left: 50%;
+		    bottom: -3em;
+		    transform: translateX(-50%);
 	    }
 		h1 {
 			font-size: 4vw;
@@ -149,15 +159,15 @@ body {
 			height: 60px;
 		}
 	}
-	
 }
+
 @keyframes blur {
-	0% { 
-		-webkit-filter: blur(0); 
+	0% {
+		-webkit-filter: blur(0);
 		background-size: 100%;
 	}
-	100% { 
-		-webkit-filter: blur(3px); 
+	100% {
+		-webkit-filter: blur(3px);
 		background-size: 100%;
 	}
 }

@@ -5770,70 +5770,74 @@ body {
     font-size: 1.069em; }
 
 .portrait {
-  background: url("../images/me.jpg") 50% 50%/cover no-repeat;
-  width: 200px;
-  height: 200px;
-  -webkit-clip-path: circle(60px at center);
-  clip-path: circle(60px at center); }
+  position: relative;
+  width: 80%;
+  padding-top: 80%;
+  border-radius: 100%;
+  background: url("../images/me.jpg") 50% 50%/140% no-repeat; }
   .portrait::before {
     content: '';
-    height: 200px;
-    width: 200px;
     display: block;
-    -webkit-clip-path: circle(60px at center);
-    clip-path: circle(60px at center);
-    background: rgba(255, 4, 0, 0.069); }
-  .portrait:hover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background: rgba(191, 64, 64, 0.069); }
+  .portrait:hover::before, .portrait:focus::before {
     -webkit-animation: hue 4s infinite;
     animation: hue 4s infinite; }
 
 @-webkit-keyframes hue {
   0% {
-    background: rgba(255, 0, 0, 0.069); }
+    background: rgba(191, 64, 64, 0.069); }
   10% {
-    background: rgba(255, 153, 0, 0.069); }
+    background: rgba(204, 143, 51, 0.069); }
   20% {
-    background: rgba(204, 255, 0, 0.069); }
+    background: rgba(181, 217, 38, 0.069); }
   30% {
-    background: rgba(51, 255, 0, 0.069); }
+    background: rgba(66, 230, 26, 0.069); }
   40% {
-    background: rgba(0, 255, 102, 0.069); }
+    background: rgba(13, 242, 105, 0.069); }
   50% {
     background: rgba(0, 255, 255, 0.069); }
   60% {
-    background: rgba(0, 102, 255, 0.069); }
+    background: rgba(13, 105, 242, 0.069); }
   70% {
-    background: rgba(51, 0, 255, 0.069); }
+    background: rgba(66, 26, 230, 0.069); }
   80% {
-    background: rgba(204, 0, 255, 0.069); }
+    background: rgba(181, 38, 217, 0.069); }
   90% {
-    background: rgba(255, 0, 153, 0.069); }
+    background: rgba(204, 51, 143, 0.069); }
   100% {
-    background: rgba(255, 0, 0, 0.069); } }
+    background: rgba(191, 64, 64, 0.069); } }
 
 @keyframes hue {
   0% {
-    background: rgba(255, 0, 0, 0.069); }
+    background: rgba(191, 64, 64, 0.069); }
   10% {
-    background: rgba(255, 153, 0, 0.069); }
+    background: rgba(204, 143, 51, 0.069); }
   20% {
-    background: rgba(204, 255, 0, 0.069); }
+    background: rgba(181, 217, 38, 0.069); }
   30% {
-    background: rgba(51, 255, 0, 0.069); }
+    background: rgba(66, 230, 26, 0.069); }
   40% {
-    background: rgba(0, 255, 102, 0.069); }
+    background: rgba(13, 242, 105, 0.069); }
   50% {
     background: rgba(0, 255, 255, 0.069); }
   60% {
-    background: rgba(0, 102, 255, 0.069); }
+    background: rgba(13, 105, 242, 0.069); }
   70% {
-    background: rgba(51, 0, 255, 0.069); }
+    background: rgba(66, 26, 230, 0.069); }
   80% {
-    background: rgba(204, 0, 255, 0.069); }
+    background: rgba(181, 38, 217, 0.069); }
   90% {
-    background: rgba(255, 0, 153, 0.069); }
+    background: rgba(204, 51, 143, 0.069); }
   100% {
-    background: rgba(255, 0, 0, 0.069); } }
+    background: rgba(191, 64, 64, 0.069); } }
 
 #projects .tile {
   position: relative;
@@ -5842,7 +5846,7 @@ body {
   #projects .tile footer {
     opacity: 0;
     transition: opacity 500ms ease; }
-  #projects .tile:hover footer {
+  #projects .tile:hover footer, #projects .tile:focus footer {
     opacity: 1; }
 
 #projects .photo {
@@ -5904,10 +5908,17 @@ body {
   #projects .caption a {
     color: #fff;
     text-decoration: none; }
-  #projects .caption > * {
-    padding: 15px 10px; }
   #projects .caption .link-out {
-    display: block; }
+    display: block;
+    background: url("../images/visit.svg");
+    width: 68px;
+    text-indent: -9999em;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: -3em;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
   #projects .caption h1 {
     font-size: 4vw;
     margin: 0 0.420em 0.187em 0;

@@ -45,11 +45,11 @@ class ProjectGallery extends React.Component {
 		return (
 			<div className="projects">
 				{this.state.projects.map((el) => {
-					return ( 
-						<ProjectTile 
-							data={el} 
-							key={el.client + '-' + el.title} 
-						/> 
+					return (
+						<ProjectTile
+							data={el}
+							key={el.client + '-' + el.title}
+						/>
 					);
 				})}
 			</div>
@@ -58,6 +58,6 @@ class ProjectGallery extends React.Component {
 };
 
 ReactDOM.render(
-	<ProjectGallery />, 
+	<ProjectGallery />,
 	window.document.querySelector('#projects')
 );
