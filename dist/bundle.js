@@ -31585,15 +31585,13 @@ var ProjectTile = (function (_React$Component) {
 		key: 'generateCaption',
 		value: function generateCaption() {
 			if (this.props.data.url !== '') {
-				return React.createElement('a', { className: 'link-out', href: this.props.data.url, target: '_blank' }, React.createElement('h1', null, this.props.data.client), React.createElement('h2', null, this.props.data.title));
-			} else {
-				return React.createElement('div', null, React.createElement('h1', null, this.props.data.client), React.createElement('h2', null, this.props.data.title));
+				return React.createElement('a', { className: 'link-out', href: this.props.data.url, target: '_blank' }, 'visit site >');
 			}
 		}
 	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('footer', null, React.createElement('div', { className: 'overlay', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }), React.createElement('div', { className: 'caption' }, React.createElement('div', { className: 'caption-content' }, this.generateCaption()))));
+			return React.createElement('div', { className: 'tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }, React.createElement('footer', null, React.createElement('div', { className: 'overlay', style: { backgroundImage: 'url(/images/' + this.props.data.image + ')' } }), React.createElement('div', { className: 'caption' }, React.createElement('div', { className: 'caption-content' }, React.createElement('h1', null, this.props.data.client), React.createElement('h2', null, this.props.data.title), this.generateCaption()))));
 		}
 	}]);
 

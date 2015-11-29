@@ -15,6 +15,36 @@ body {
 	}
 	* { font-size: 1.069em; }
 }
+.portrait {
+	background: url('../images/me.jpg') 50% 50%/cover no-repeat;
+	width: 200px;
+	height: 200px;
+	clip-path: circle(60px at center);
+	&::before {
+		content: '';
+		height: 200px;
+		width: 200px;
+		display: block;
+		clip-path: circle(60px at center);
+	    background: hsla(1, 100%, 50%, 0.069);
+	}
+	&:hover::before {
+		animation: hue 4s infinite;
+	}
+}
+@keyframes hue {
+  0%  { background: hsla(0, 100%, 50%, 0.069); }
+  10%  { background: hsla(36, 100%, 50%, 0.069); }
+  20%  { background: hsla(72, 100%, 50%, 0.069); }
+  30%  { background: hsla(108, 100%, 50%, 0.069); }
+  40%  { background: hsla(144, 100%, 50%, 0.069); }
+  50%  { background: hsla(180, 100%, 50%, 0.069); }
+  60%  { background: hsla(216, 100%, 50%, 0.069); }
+  70%  { background: hsla(252, 100%, 50%, 0.069); }
+  80%  { background: hsla(288, 100%, 50%, 0.069); }
+  90%  { background: hsla(324, 100%, 50%, 0.069); }
+  100%  { background: hsla(360, 100%, 50%, 0.069); }
+}
 #projects {
 	.tile {
 		position: relative;

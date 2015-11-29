@@ -11,17 +11,7 @@ class ProjectTile extends React.Component {
 	generateCaption () {
 		if (this.props.data.url !== '') {
 			return (
-				<a className="link-out" href={this.props.data.url} target="_blank">
-					<h1>{this.props.data.client}</h1>
-					<h2>{this.props.data.title}</h2>
-				</a>
-			);
-		} else {
-			return (
-				<div>
-					<h1>{this.props.data.client}</h1>
-					<h2>{this.props.data.title}</h2>
-				</div>
+				<a className="link-out" href={this.props.data.url} target="_blank">visit site &gt;</a>
 			);
 		}
 	}
@@ -31,7 +21,11 @@ class ProjectTile extends React.Component {
 				<footer>
 					<div className="overlay" style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}></div>
 					<div className="caption">
-						<div className="caption-content">{ this.generateCaption() }</div>
+						<div className="caption-content">
+							<h1>{this.props.data.client}</h1>
+							<h2>{this.props.data.title}</h2>
+							{ this.generateCaption() }
+						</div>
 					</div>
 				</footer>
 			</div>
