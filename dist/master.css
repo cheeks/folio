@@ -5755,6 +5755,20 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  background: #eee; }
+
+.site-header,
+.site-footer {
+  background: #F4D014;
+  padding: 1em 0; }
+  .site-header h1,
+  .site-footer h1 {
+    margin: 0; }
+  .site-header *,
+  .site-footer * {
+    font-size: 1.069em; }
+
 #projects .tile {
   position: relative;
   overflow: hidden;
@@ -5804,7 +5818,7 @@ button.close {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); }
+    background: rgba(0, 0, 0, 0.35); }
 
 #projects .caption {
   color: #fff;
@@ -5822,22 +5836,26 @@ button.close {
     transform: translateY(-50%);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5); }
   #projects .caption a {
-    color: #fff; }
+    color: #fff;
+    text-decoration: none; }
   #projects .caption > * {
     padding: 15px 10px; }
-  #projects .caption h1, #projects .caption h2 {
-    font-size: 4vw; }
-    @media screen and (min-width: 768px) {
-      #projects .caption h1, #projects .caption h2 {
-        font-size: 2vw; } }
   #projects .caption .link-out {
     display: block; }
   #projects .caption h1 {
-    margin: 0 0.420em 0 0;
+    font-size: 4vw;
+    margin: 0 0.420em 0.187em 0;
     font-weight: 800; }
+    @media screen and (min-width: 768px) {
+      #projects .caption h1 {
+        font-size: 2vw; } }
   #projects .caption h2 {
+    font-size: 3.5vw;
     margin: 0;
     font-weight: 600; }
+    @media screen and (min-width: 768px) {
+      #projects .caption h2 {
+        font-size: 1.5vw; } }
   #projects .caption p {
     height: 60px; }
 

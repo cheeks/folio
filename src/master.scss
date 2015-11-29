@@ -1,6 +1,20 @@
 @import 'scss/bootstrap-vars';
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 
+$theme-color: #F4D014;
+
+body {
+	background: #eee;
+}
+.site-header,
+.site-footer {
+	background: $theme-color;
+	padding: 1em 0;
+	h1 {
+		margin: 0;
+	}
+	* { font-size: 1.069em; }
+}
 #projects {
 	.tile {
 		position: relative;
@@ -55,7 +69,7 @@
 			bottom: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(0,0,0,0.2);
+			background: rgba(0,0,0,0.35);
 		}
 	}
 	.caption {
@@ -75,26 +89,29 @@
 		}
 		a {
 			color: #fff;
+			text-decoration: none;
 		}
 		& > * {
 		    padding: 15px 10px;
 		}
 	    %headline {
-			font-size: 4vw;
-			@media screen and (min-width: $screen-sm-min) {
-				font-size: 2vw;
-			}
 	    }
 	    .link-out {
 	    	display: block;
 	    }
 		h1 {
-			@extend %headline;
-			margin: 0 0.420em 0 0;
+			font-size: 4vw;
+			@media screen and (min-width: $screen-sm-min) {
+				font-size: 2vw;
+			}
+			margin: 0 0.420em 0.187em 0;
 			font-weight: 800;
 		}
 		h2 {
-			@extend %headline;
+			font-size: 3.5vw;
+			@media screen and (min-width: $screen-sm-min) {
+				font-size: 1.5vw;
+			}
 			margin: 0;
 			font-weight: 600;
 		}

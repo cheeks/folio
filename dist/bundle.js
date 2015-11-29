@@ -31452,13 +31452,6 @@ module.exports=[
 		"url": "http://www.sunglasshut.com/us/sunglasses-trends/shop-by-face-shape"
 	},
 	{
-		"client": "Facebook",
-		"title": "Facebook Studio Awards",
-		"description": "Award site for ad campaigns that use Facebook technologies.",
-		"image": "facebook-studio.jpg",
-		"url": "http://www.facebook-studio.com/"
-	},
-	{
 		"client": "EVB",
 		"title": "Agency Portfolio",
 		"description": "A rebooted portfolio site to go with the new branding EVB had adopted.",
@@ -31487,11 +31480,11 @@ module.exports=[
 		"url": "https://play.google.com/store/apps/details?id=com.juicyfruit.sweettalk.prod"
 	},
 	{
-		"client": "Venrock",
-		"title": "VC Firm Portfolio",
-		"description": "A portfolio for a venture capital firm.",
-		"image": "venrock.jpg",
-		"url": "http://www.venrock.com/"
+		"client": "Facebook",
+		"title": "Facebook Studio Awards",
+		"description": "Award site for ad campaigns that use Facebook technologies.",
+		"image": "facebook-studio.jpg",
+		"url": "http://www.facebook-studio.com/"
 	},
 	{
 		"client": "Domino's Pizza",
@@ -31499,6 +31492,13 @@ module.exports=[
 		"description": "Crowdsourced clever proverbs for Domino's Pizza boxes and let the internet decide which were best via a voting system.",
 		"image": "pizza-proverbs2.jpg",
 		"url": ""
+	},
+	{
+		"client": "Venrock",
+		"title": "VC Firm Portfolio",
+		"description": "A portfolio for a venture capital firm.",
+		"image": "venrock.jpg",
+		"url": "http://www.venrock.com/"
 	},
 	{
 		"client": "American Express",
@@ -31533,7 +31533,7 @@ module.exports=[
 		"title": "Social Kitchen",
 		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
 		"image": "social-kitchen.jpg",
-		"url": ""
+		"url": "https://socialkitchen.collegeinn.com/"
 	}
 ]
 },{}],161:[function(require,module,exports){
