@@ -5844,16 +5844,22 @@ button.close {
       font-size: 4vw;
       margin: 0 0 0.187em;
       font-weight: 800; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 992px) {
         .projects .caption h1 {
           font-size: 3vw; } }
+      @media screen and (min-width: 1200px) {
+        .projects .caption h1 {
+          font-size: 2.420vw; } }
     .projects .caption h2 {
-      font-size: 3.5vw;
+      font-size: 3vw;
       margin: 0;
       font-weight: 600; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 992px) {
         .projects .caption h2 {
-          font-size: 1.5vw; } }
+          font-size: 2vw; } }
+      @media screen and (min-width: 1200px) {
+        .projects .caption h2 {
+          font-size: 1.420vw; } }
     .projects .caption p {
       height: 60px; }
 
