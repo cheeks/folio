@@ -5843,33 +5843,33 @@ body {
   100% {
     background: rgba(191, 64, 64, 0.069); } }
 
-#projects .tile {
+.projects .tile {
   position: relative;
   overflow: hidden;
   text-decoration: none; }
-  #projects .tile footer {
+  .projects .tile footer {
     opacity: 0;
     transition: opacity 500ms ease; }
-  #projects .tile:hover footer, #projects .tile:focus footer {
+  .projects .tile:hover footer, .projects .tile:focus footer {
     opacity: 1; }
 
-#projects .photo {
+.projects .photo {
   padding-top: 63.8%;
   background-size: 100%;
   background-position: 50% 0%;
   background-repeat: no-repeat;
   transition: background-size 300ms ease; }
   @media screen and (min-width: 768px) {
-    #projects .photo {
+    .projects .photo {
       padding-top: 32%; } }
   @media screen and (min-width: 992px) {
-    #projects .photo {
+    .projects .photo {
       padding-top: 26.3%; } }
   @media screen and (min-width: 1200px) {
-    #projects .photo {
+    .projects .photo {
       padding-top: 19.8%; } }
 
-#projects .overlay {
+.projects .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -5882,7 +5882,7 @@ body {
   background-repeat: no-repeat;
   -webkit-filter: blur(4px);
   filter: blur(4px); }
-  #projects .overlay::before {
+  .projects .overlay::before {
     content: '';
     position: absolute;
     z-index: 2;
@@ -5894,7 +5894,7 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.35); }
 
-#projects .caption {
+.projects .caption {
   color: #fff;
   width: 100%;
   height: 100%;
@@ -5903,16 +5903,16 @@ body {
   left: 0;
   text-align: center;
   z-index: 3; }
-  #projects .caption .caption-content {
+  .projects .caption .caption-content {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5); }
-  #projects .caption a {
+  .projects .caption a {
     color: #fff;
     text-decoration: none; }
-  #projects .caption .link-out {
+  .projects .caption .link-out {
     display: block;
     width: 68px;
     height: 30px;
@@ -5922,28 +5922,28 @@ body {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     transition: background; }
-    #projects .caption .link-out .visit-btn {
+    .projects .caption .link-out .visit-btn {
       transition: fill 250ms ease; }
-    #projects .caption .link-out:hover {
+    .projects .caption .link-out:hover {
       background: #fff;
       border-radius: 7px; }
-      #projects .caption .link-out:hover .visit-btn {
+      .projects .caption .link-out:hover .visit-btn {
         fill: #63318C; }
-  #projects .caption h1 {
+  .projects .caption h1 {
     font-size: 4vw;
     margin: 0 0 0.187em;
     font-weight: 800; }
     @media screen and (min-width: 768px) {
-      #projects .caption h1 {
+      .projects .caption h1 {
         font-size: 2vw; } }
-  #projects .caption h2 {
+  .projects .caption h2 {
     font-size: 3.5vw;
     margin: 0;
     font-weight: 600; }
     @media screen and (min-width: 768px) {
-      #projects .caption h2 {
+      .projects .caption h2 {
         font-size: 1.5vw; } }
-  #projects .caption p {
+  .projects .caption p {
     height: 60px; }
 
 @-webkit-keyframes blur {
