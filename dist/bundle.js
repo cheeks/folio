@@ -36120,7 +36120,7 @@ var App = (function (_React$Component) {
 	_createClass(App, [{
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', null, React.createElement('header', { className: 'site-header' }, React.createElement('div', { className: 'container' }, React.createElement('div', { className: 'row' }, React.createElement('div', { className: 'col-xs-12' }, React.createElement('h1', { className: 'pull-left' }, 'Joshua Kanner'), React.createElement('nav', { className: 'pull-right' }, React.createElement(Link, { to: '/' }, 'Work'), React.createElement(Link, { to: '/resume' }, 'Resume')))))), this.props.children, React.createElement('footer', { className: 'site-footer' }, React.createElement('div', { className: 'container' }, React.createElement('div', { className: 'row' }, React.createElement('div', { className: 'col-xs-12' }, '© Joshua Kanner')))));
+			return React.createElement('div', null, React.createElement('header', { className: 'site-header' }, React.createElement('div', { className: 'container' }, React.createElement('div', { className: 'row' }, React.createElement('div', { className: 'col-xs-12' }, React.createElement('cite', { className: 'pull-left' }, React.createElement('h1', null, 'Joshua Kanner'), React.createElement('h2', null, 'Front-End Developer')), React.createElement('nav', { className: 'pull-right' }, React.createElement(Link, { to: '/' }, 'Work'), ' / ', React.createElement(Link, { to: '/resume' }, 'Resume')))))), this.props.children, React.createElement('footer', { className: 'site-footer' }, React.createElement('div', { className: 'container' }, React.createElement('div', { className: 'row' }, React.createElement('div', { className: 'col-xs-12' }, '© Joshua Kanner')))));
 		}
 	}]);
 
@@ -36130,11 +36130,6 @@ var App = (function (_React$Component) {
 ;
 
 ReactDOM.render(React.createElement(Router, null, React.createElement(Route, { component: App }, React.createElement(Route, { path: '/', component: WorkPage }), React.createElement(Route, { path: 'resume', component: ResumePage }))), document.querySelector('#app'));
-
-// ReactDOM.render((
-// 	<ProjectGallery />,
-// 	window.document.querySelector('#projects')
-// );
 
 },{"./js/resume":211,"./js/work":212,"react":207,"react-dom":54,"react-router":74}],211:[function(require,module,exports){
 "use strict";
@@ -36181,7 +36176,7 @@ var ResumePage = (function (_React$Component) {
   _createClass(ResumePage, [{
     key: "render",
     value: function render() {
-      return React.createElement("div", null, React.createElement("div", { className: "container" }, React.createElement("div", { className: "row" }, React.createElement("h1", null, "Joshua Kanner"), React.createElement("h2", null, "Blah Blah Blah"))));
+      return React.createElement("div", { className: "container" }, React.createElement("div", { className: "row" }, React.createElement("div", { className: "col-xs-12 col-sm-4 col-md-3 col-lg-2" }, React.createElement("div", { className: "portrait" })), React.createElement("div", { className: "col-xs-12 col-sm-8 col-md-9 col-lg-10" }, React.createElement("h1", null, "Joshua Kanner"), React.createElement("h2", null, "Blah Blah Blah"))));
     }
   }]);
 
@@ -36270,12 +36265,12 @@ var ProjectGallery = (function (_React$Component2) {
   _createClass(ProjectGallery, [{
     key: 'render',
     value: function render() {
-      return React.createElement('div', { className: 'projects row' }, this.state.projects.map(function (el) {
+      return React.createElement('div', { className: 'projects container-fluid' }, React.createElement('div', { className: 'row' }, this.state.projects.map(function (el) {
         return React.createElement(ProjectTile, {
           data: el,
           key: el.client + '-' + el.title
         });
-      }));
+      })));
     }
   }]);
 
@@ -36296,7 +36291,7 @@ var WorkPage = (function (_React$Component3) {
   _createClass(WorkPage, [{
     key: 'render',
     value: function render() {
-      return React.createElement('div', null, React.createElement('div', { className: 'container' }, React.createElement('div', { className: 'row' }, React.createElement('div', { className: 'col-xs-12 col-sm-4 col-md-3 col-lg-2' }, React.createElement('div', { className: 'portrait' })), React.createElement('h1', null, 'Joshua Kanner'), React.createElement('h2', null, 'Front-End Developer'))), React.createElement('div', { className: 'container-fluid' }, React.createElement(ProjectGallery, null)));
+      return React.createElement(ProjectGallery, null);
     }
   }]);
 

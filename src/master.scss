@@ -1,23 +1,46 @@
+$theme-color: #63318C;
 @import 'scss/bootstrap-vars';
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
-
-$theme-color: #63318C;
+@import 'scss/projects';
 
 body {
 	background: #eee;
 }
 .site-header,
 .site-footer {
-	background: $theme-color;
-	padding: 1em 0;
-  color: #eee;
+	background: #333;
+	padding: 1em 0 2em;
+  color: #fff;
   a {
     color: #eee;
   }
-	h1 {
-		margin: 0;
+	h1, h2 {
+		margin: 1em 0 0;
 	}
 	* { font-size: 1.069em; }
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  cite {
+    font-style: normal;
+  }
+  h1 {
+    font-size: 1.187em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 0.69em;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  nav {
+    margin: 1em 0 0;
+  }
 }
 .portrait {
 	position: relative;
@@ -55,132 +78,4 @@ body {
   80%   { background: hsla(288, 70%, 50%, 0.069); }
   90%   { background: hsla(324, 60%, 50%, 0.069); }
   100%  { background: hsla(360, 50%, 50%, 0.069); }
-}
-.projects {
-	.tile {
-		position: relative;
-		overflow: hidden;
-		text-decoration: none;
-		footer {
-			opacity: 0;
-			transition: opacity 500ms ease;
-		}
-		&:hover,
-		&:focus {
-			footer {
-				opacity: 1;
-			}
-		}
-	}
-	.photo {
-		padding-top: 63.8%;
-		@media screen and (min-width: $screen-sm-min) {
-			padding-top: 32%;
-		}
-		@media screen and (min-width: $screen-md-min) {
-			padding-top: 26.3%;
-		}
-		@media screen and (min-width: $screen-lg-min) {
-			padding-top: 19.8%;
-		}
-		background-size: 100%;
-		background-position: 50% 0%;
-		background-repeat: no-repeat;
-		transition: background-size 300ms ease;
-	}
-	.overlay {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background-size: 100%;
-		background-position: 50% 0%;
-		background-repeat: no-repeat;
-		filter: blur(4px);
-		&::before {
-			content: '';
-			position: absolute;
-			z-index: 2;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0,0,0,0.35);
-		}
-	}
-	.caption {
-		color: #fff;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		text-align: center;
-		z-index: 3;
-		.caption-content {
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-			text-shadow: 1px 1px rgba(0,0,0,0.5);
-		}
-		a {
-			color: #fff;
-			text-decoration: none;
-		}
-    .link-out {
-      display: block;
-      width: 68px;
-      height: 30px;
-      position: absolute;
-      left: 50%;
-      bottom: -3em;
-      transform: translateX(-50%);
-      transition: background;
-      .visit-btn {
-        transition: fill 250ms ease;
-      }
-      &:hover {
-        background: #fff;
-        border-radius: 7px;
-        .visit-btn {
-          fill: $theme-color;
-        }
-      }
-    }
-		h1 {
-			font-size: 4vw;
-			@media screen and (min-width: $screen-sm-min) {
-				font-size: 2vw;
-			}
-			margin: 0 0 0.187em;
-			font-weight: 800;
-		}
-		h2 {
-			font-size: 3.5vw;
-			@media screen and (min-width: $screen-sm-min) {
-				font-size: 1.5vw;
-			}
-			margin: 0;
-			font-weight: 600;
-		}
-		p {
-			height: 60px;
-		}
-	}
-}
-
-@keyframes blur {
-	0% {
-		-webkit-filter: blur(0);
-		background-size: 100%;
-	}
-	100% {
-		-webkit-filter: blur(3px);
-		background-size: 100%;
-	}
 }

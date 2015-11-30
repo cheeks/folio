@@ -4,20 +4,20 @@ let { Router, Route, Link } = require('react-router');
 let WorkPage = require('./js/work');
 let ResumePage = require('./js/resume');
 
-
 class App extends React.Component {
 	render () {
 		return (
 			<div>
-
 				<header className="site-header">
 					<div className="container">
 						<div className="row">
 							<div className="col-xs-12">
-								<h1 className="pull-left">Joshua Kanner</h1>
+								<cite className="pull-left">
+									<h1>Joshua Kanner</h1>
+									<h2>Front-End Developer</h2>
+								</cite>
 								<nav className="pull-right">
-									<Link to="/">Work</Link>
-									<Link to="/resume">Resume</Link>
+									<Link to="/">Work</Link> / <Link to="/resume">Resume</Link>
 								</nav>
 							</div>
 						</div>
@@ -33,7 +33,6 @@ class App extends React.Component {
 						</div>
 					</div>
 				</footer>
-
 			</div>
 		);
 	}
@@ -46,11 +45,4 @@ ReactDOM.render((
       <Route path="resume" component={ResumePage} />
     </Route>
   </Router>
-), document.querySelector('#app'))
-
-
-
-// ReactDOM.render((
-// 	<ProjectGallery />,
-// 	window.document.querySelector('#projects')
-// );
+), document.querySelector('#app'));

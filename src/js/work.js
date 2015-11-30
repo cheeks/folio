@@ -43,15 +43,17 @@ class ProjectGallery extends React.Component {
   }
   render () {
     return (
-      <div className="projects row">
-        {this.state.projects.map((el) => {
-          return (
-            <ProjectTile
-              data={el}
-              key={el.client + '-' + el.title}
-            />
-          );
-        })}
+      <div className="projects container-fluid">
+        <div className="row">
+          {this.state.projects.map((el) => {
+            return (
+              <ProjectTile
+                data={el}
+                key={el.client + '-' + el.title}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }
@@ -60,20 +62,7 @@ class ProjectGallery extends React.Component {
 class WorkPage extends React.Component {
   render () {
     return (
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-              <div className="portrait"></div>
-            </div>
-            <h1>Joshua Kanner</h1>
-            <h2>Front-End Developer</h2>
-          </div>
-        </div>
-        <div className="container-fluid">
-          <ProjectGallery />
-        </div>
-      </div>
+      <ProjectGallery />
 
     );
   }
