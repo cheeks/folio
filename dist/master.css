@@ -5760,8 +5760,12 @@ body {
 
 .site-header,
 .site-footer {
-  background: #F4D014;
-  padding: 1em 0; }
+  background: #63318C;
+  padding: 1em 0;
+  color: #eee; }
+  .site-header a,
+  .site-footer a {
+    color: #eee; }
   .site-header h1,
   .site-footer h1 {
     margin: 0; }
@@ -5910,18 +5914,24 @@ body {
     text-decoration: none; }
   #projects .caption .link-out {
     display: block;
-    background: url("../images/visit.svg");
     width: 68px;
-    text-indent: -9999em;
     height: 30px;
     position: absolute;
     left: 50%;
     bottom: -3em;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    transition: background; }
+    #projects .caption .link-out .visit-btn {
+      transition: fill 250ms ease; }
+    #projects .caption .link-out:hover {
+      background: #fff;
+      border-radius: 7px; }
+      #projects .caption .link-out:hover .visit-btn {
+        fill: #63318C; }
   #projects .caption h1 {
     font-size: 4vw;
-    margin: 0 0.420em 0.187em 0;
+    margin: 0 0 0.187em;
     font-weight: 800; }
     @media screen and (min-width: 768px) {
       #projects .caption h1 {

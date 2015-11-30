@@ -1,7 +1,7 @@
 @import 'scss/bootstrap-vars';
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 
-$theme-color: #F4D014;
+$theme-color: #63318C;
 
 body {
 	background: #eee;
@@ -10,6 +10,10 @@ body {
 .site-footer {
 	background: $theme-color;
 	padding: 1em 0;
+  color: #eee;
+  a {
+    color: #eee;
+  }
 	h1 {
 		margin: 0;
 	}
@@ -128,23 +132,32 @@ body {
 			color: #fff;
 			text-decoration: none;
 		}
-	    .link-out {
-		    display: block;
-		    background: url("../images/visit.svg");
-		    width: 68px;
-		    text-indent: -9999em;
-		    height: 30px;
-		    position: absolute;
-		    left: 50%;
-		    bottom: -3em;
-		    transform: translateX(-50%);
-	    }
+    .link-out {
+      display: block;
+      width: 68px;
+      height: 30px;
+      position: absolute;
+      left: 50%;
+      bottom: -3em;
+      transform: translateX(-50%);
+      transition: background;
+      .visit-btn {
+        transition: fill 250ms ease;
+      }
+      &:hover {
+        background: #fff;
+        border-radius: 7px;
+        .visit-btn {
+          fill: $theme-color;
+        }
+      }
+    }
 		h1 {
 			font-size: 4vw;
 			@media screen and (min-width: $screen-sm-min) {
 				font-size: 2vw;
 			}
-			margin: 0 0.420em 0.187em 0;
+			margin: 0 0 0.187em;
 			font-weight: 800;
 		}
 		h2 {
