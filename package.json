@@ -28,7 +28,6 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.0",
-    "uglify": "^0.1.5",
     "utils-merge": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
@@ -40,10 +39,7 @@
     ]
   },
   "scripts": {
-    "css-build": "node-sass src/master.scss -o dist",
-    "css-watch": "node-sass -w src/master.scss -o dist",
-    "js-build": "browserify src/app.js -t babelify -o dist/bundle.js",
-    "js-watch": "watchify src/app.js -o dist/bundle.js",
+    "local": "gulp && node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
