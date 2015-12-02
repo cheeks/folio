@@ -29,7 +29,8 @@ const App = React.createClass ({
                   <h2>Front-End Developer</h2>
                 </cite>
                 <nav className="pull-right">
-                  <SiteLink to="/">Work</SiteLink> / <SiteLink to="/resume">Resume</SiteLink>
+                  <SiteLink to="/">Work</SiteLink>
+                  <SiteLink to="/resume">Resume</SiteLink>
                 </nav>
               </div>
             </div>

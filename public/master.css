@@ -5892,7 +5892,10 @@ body {
   color: #fff; }
   .site-header a,
   .site-footer a {
-    color: #eee; }
+    color: #eee;
+    margin-left: 1em;
+    font-size: 0.9em;
+    font-weight: 300; }
   .site-header h1, .site-header h2,
   .site-footer h1,
   .site-footer h2 {
@@ -5918,7 +5921,7 @@ body {
     text-transform: uppercase;
     font-weight: 300; }
   .site-header nav {
-    margin: 1em 0 0; }
+    margin: 2.7em 0 0; }
 
 .portrait {
   position: relative;
