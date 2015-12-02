@@ -1,7 +1,7 @@
 const React = require('react');
 
 
-class ResumePage extends React.Component {
+const ResumePage = React.createClass ({
   render () {
     return (
       <section className="resume container">
@@ -16,7 +16,7 @@ class ResumePage extends React.Component {
             <h1>Skills &amp; Tools</h1>
             <ul>
               <li>HTML, CSS, JavaScript, Node, PHP</li>
-              <li>Browserify, React, jQuery</li>
+              <li>Browserify, ES2015, React, jQuery</li>
               <li>SCSS, Compass, Myth, Grid Systems</li>
               <li>Express, Socket.io</li>
               <li>MySQL, mongoDB</li>
@@ -47,6 +47,6 @@ class ResumePage extends React.Component {
       </section>
     );
   }
-}
+});
 
 module.exports = ResumePage;

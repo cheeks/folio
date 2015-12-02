@@ -1,12 +1,22 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const { Router, Route, Link } = require('react-router');
-const WorkPage = require('./work');
+const { Router, Route, Link, History } = require('react-router');
+const ProjectGallery = require('./work');
 const ResumePage = require('./resume');
 const createBrowserHistory = require('history/lib/createBrowserHistory');
 
+const SiteLink = React.createClass ({
+  mixins: [History],
+  render () {
+    let isActive = this.history.isActive(this.props.to, this.props.query);
+    let className = isActive ? 'active' : '';
+    return (
+      <Link {...this.props} className={className} />
+    )
+  }
+});
 
-class App extends React.Component {
+const App = React.createClass ({
   render () {
     return (
       <div>
@@ -19,7 +29,7 @@ class App extends React.Component {
                   <h2>Front-End Developer</h2>
                 </cite>
                 <nav className="pull-right">
-                  <Link to="/">Work</Link> / <Link to="/resume">Resume</Link>
+                  <SiteLink to="/">Work</SiteLink> / <SiteLink to="/resume">Resume</SiteLink>
                 </nav>
               </div>
             </div>
@@ -38,12 +48,12 @@ class App extends React.Component {
       </div>
     );
   }
-};
+});
 
 ReactDOM.render((
   <Router history={createBrowserHistory()}>
     <Route component={App}>
-      <Route path="/" component={WorkPage} />
+      <Route path="/" component={ProjectGallery} />
       <Route path="resume" component={ResumePage} />
     </Route>
   </Router>

@@ -2,10 +2,7 @@ const React = require('react');
 const _ = require('lodash');
 const data = require('../../projects.json');
 
-class ProjectTile extends React.Component {
-  constructor (props) {
-    super(props);
-  }
+const ProjectTile = React.createClass ({
   generateCaption () {
     if (this.props.data.url !== '') {
       return (
@@ -14,7 +11,7 @@ class ProjectTile extends React.Component {
         </a>
       );
     }
-  }
+  },
   render () {
     return (
       <div className="tile photo col-xs-12 col-sm-6 col-md-4 col-lg-3"  style={{ backgroundImage: 'url(/images/'+this.props.data.image+')' }}>
@@ -31,16 +28,14 @@ class ProjectTile extends React.Component {
       </div>
     );
   }
-};
+});
 
-class ProjectGallery extends React.Component {
-  constructor (props) {
-    super(props);
-
-    this.state = {
+const ProjectGallery = React.createClass ({
+  getInitialState() {
+    return {
       projects: _.clone(data, true)
-    };
-  }
+    }
+  },
   render () {
     return (
       <section className="projects container-fluid">
@@ -57,15 +52,7 @@ class ProjectGallery extends React.Component {
       </section>
     );
   }
-};
+});
 
-class WorkPage extends React.Component {
-  render () {
-    return (
-      <ProjectGallery />
 
-    );
-  }
-}
-
-module.exports = WorkPage;
+module.exports = ProjectGallery;
