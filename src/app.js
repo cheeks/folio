@@ -3,6 +3,7 @@ let ReactDOM = require('react-dom');
 let { Router, Route, Link } = require('react-router');
 let WorkPage = require('./js/work');
 let ResumePage = require('./js/resume');
+let createBrowserHistory = require('history/lib/createBrowserHistory');
 
 class App extends React.Component {
 	render () {
@@ -29,7 +30,7 @@ class App extends React.Component {
 				<footer className="site-footer">
 					<div className="container">
 						<div className="row">
-							<div className="col-xs-12">&copy; Joshua Kanner</div>
+							<div className="col-xs-12" dangerouslySetInnerHTML={{__html: '&copy; Joshua Kanner'}} />
 						</div>
 					</div>
 				</footer>
@@ -39,7 +40,7 @@ class App extends React.Component {
 };
 
 ReactDOM.render((
-  <Router>
+  <Router history={createBrowserHistory()}>
     <Route component={App}>
       <Route path="/" component={WorkPage} />
       <Route path="resume" component={ResumePage} />

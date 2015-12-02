@@ -4,7 +4,7 @@ let React = require('react');
 class ResumePage extends React.Component {
   render () {
     return (
-      <div className="container">
+      <section className="resume container">
         <div className="row">
           <div className="col-xs-12 col-sm-4 col-md-3 col-lg-2">
             <div className="portrait"></div>
@@ -14,7 +14,7 @@ class ResumePage extends React.Component {
             <h2>Blah Blah Blah</h2>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

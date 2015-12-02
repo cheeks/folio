@@ -21,7 +21,7 @@ var config = {
 	js: {
 		src: './src/app.js',
 		watch: './src/**/*.js',
-		outputDir: './dist/',
+		outputDir: './public/',
 		outputFile: 'bundle.js'
 	}
 };
@@ -65,7 +65,7 @@ gulp.task('sass', function () {
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('default', function () {

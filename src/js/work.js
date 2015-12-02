@@ -43,7 +43,7 @@ class ProjectGallery extends React.Component {
   }
   render () {
     return (
-      <div className="projects container-fluid">
+      <section className="projects container-fluid">
         <div className="row">
           {this.state.projects.map((el) => {
             return (
@@ -54,7 +54,7 @@ class ProjectGallery extends React.Component {
             );
           })}
         </div>
-      </div>
+      </section>
     );
   }
 };
