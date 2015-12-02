@@ -1,6 +1,6 @@
-let React = require('react');
-let _ = require('lodash');
-let data = require('../../projects.json');
+const React = require('react');
+const _ = require('lodash');
+const data = require('../../projects.json');
 
 class ProjectTile extends React.Component {
   constructor (props) {

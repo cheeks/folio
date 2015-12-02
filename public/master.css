@@ -5879,6 +5879,9 @@ button.close {
     -webkit-filter: blur(3px);
     background-size: 100%; } }
 
+section.resume {
+  margin-top: 8em; }
+
 body {
   background: #eee; }
 
