@@ -5880,70 +5880,42 @@ button.close {
     background-size: 100%; } }
 
 section.resume {
-  margin-top: 8em; }
-
-body {
-  background: #eee; }
-
-.site-header,
-.site-footer {
-  background: #333;
-  padding: 1em 0 2em;
-  color: #fff; }
-  .site-header a,
-  .site-footer a {
-    color: #eee;
-    margin-left: 1em;
-    font-size: 0.9em;
-    font-weight: 300; }
-  .site-header h1, .site-header h2,
-  .site-footer h1,
-  .site-footer h2 {
-    margin: 1em 0 0; }
-  .site-header *,
-  .site-footer * {
-    font-size: 1.069em; }
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5; }
-  .site-header cite {
-    font-style: normal; }
-  .site-header h1 {
-    font-size: 1.187em;
-    text-transform: uppercase;
-    font-weight: 600; }
-  .site-header h2 {
-    font-size: 0.69em;
-    text-transform: uppercase;
-    font-weight: 300; }
-  .site-header nav {
-    margin: 2.7em 0 0; }
-
-.portrait {
-  position: relative;
-  width: 80%;
-  padding-top: 80%;
-  border-radius: 100%;
-  background: url("../images/me.jpg") 50% 50%/140% no-repeat; }
-  .portrait::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
+  background: #fff;
+  margin-top: 8em;
+  line-height: 1.5; }
+  section.resume ul {
+    margin: 0;
+    list-style: none;
+    padding: 0; }
+  section.resume ul, section.resume p {
+    font-weight: 300;
+    font-size: 1.25em; }
+  section.resume h1 {
+    font-weight: 600;
+    font-size: 2em; }
+  section.resume .jobs li {
+    margin-bottom: 1em; }
+  section.resume .portrait {
+    position: relative;
+    width: 80%;
+    padding-top: 80%;
     border-radius: 100%;
-    background: rgba(191, 64, 64, 0.069); }
-  .portrait:hover::before, .portrait:focus::before {
-    -webkit-animation: hue 4s infinite;
-    animation: hue 4s infinite; }
+    background: url("../images/me.jpg") 50% 50%/140% no-repeat; }
+    section.resume .portrait::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      background: rgba(191, 64, 64, 0.069); }
+    section.resume .portrait:hover::before, section.resume .portrait:focus::before {
+      -webkit-animation: hue 4s infinite;
+      animation: hue 4s infinite; }
 
 @-webkit-keyframes hue {
   0% {
@@ -5992,3 +5964,44 @@ body {
     background: rgba(204, 51, 143, 0.069); }
   100% {
     background: rgba(191, 64, 64, 0.069); } }
+
+body {
+  background: #eee; }
+
+.site-header,
+.site-footer {
+  background: #333;
+  padding: 1em 0 2em;
+  color: #fff; }
+  .site-header a,
+  .site-footer a {
+    color: #eee;
+    margin-left: 1em;
+    font-size: 0.9em;
+    font-weight: 300; }
+  .site-header h1, .site-header h2,
+  .site-footer h1,
+  .site-footer h2 {
+    margin: 1em 0 0; }
+  .site-header *,
+  .site-footer * {
+    font-size: 1.069em; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5; }
+  .site-header cite {
+    font-style: normal; }
+  .site-header h1 {
+    font-size: 1.187em;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .site-header h2 {
+    font-size: 0.69em;
+    text-transform: uppercase;
+    font-weight: 300; }
+  .site-header nav {
+    margin: 2.7em 0 0; }

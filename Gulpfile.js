@@ -49,6 +49,7 @@ function bundle (bundler) {
     .on('error', mapError)
     .pipe(source('app.js'))
     .pipe(buffer())
+    .pipe(uglify())
     .pipe(rename(config.js.outputFile))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('./map'))
