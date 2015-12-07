@@ -14,7 +14,6 @@ body {
   color: #fff;
   a {
     color: #eee;
-    margin-left: 1em;
     font-size: 0.9em;
     font-weight: 300;
   }
@@ -24,25 +23,48 @@ body {
 	* { font-size: 1.069em; }
 }
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
+  text-align: center;
+  @media screen and (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+
+  nav {
+    margin: 2.1em 0 0;
+    @media screen and (min-width: $screen-sm-min) {
+      margin: 2.7em 0 0;
+      float: right;
+      text-align: right;
+    }
+    .work {
+      @extend .col-xs-6;
+      @extend .col-sm-5;
+      @extend .col-md-4;
+      @extend .col-md-offset-3;
+      @extend .col-lg-3;
+      @extend .col-lg-offset-5;
+    }
+    .resume {
+      @extend .col-xs-6;
+      @extend .col-sm-7;
+      @extend .col-md-5;
+      @extend .col-lg-4;
+    }
+  }
   cite {
     font-style: normal;
-  }
-  h1 {
-    font-size: 1.187em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  h2 {
-    font-size: 0.69em;
-    text-transform: uppercase;
-    font-weight: 300;
-  }
-  nav {
-    margin: 2.7em 0 0;
+    h1 {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.75);
+    }
   }
 }

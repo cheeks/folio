@@ -9,7 +9,8 @@ const SiteLink = React.createClass ({
   mixins: [History],
   render () {
     let isActive = this.history.isActive(this.props.to, this.props.query);
-    let className = isActive ? 'active' : '';
+    let currClass = this.props.className;
+    let className = isActive ? currClass += ' active' : currClass;
     return (
       <Link {...this.props} className={className} />
     )
@@ -23,16 +24,14 @@ const App = React.createClass ({
         <header className="site-header">
           <div className="container">
             <div className="row">
-              <div className="col-xs-12">
-                <cite className="pull-left">
+              <cite className="col-xs-12 col-sm-6">
                   <h1>Joshua Kanner</h1>
                   <h2>Front-End Developer</h2>
-                </cite>
-                <nav className="pull-right">
-                  <SiteLink to="/">Work</SiteLink>
-                  <SiteLink to="/resume">Resume</SiteLink>
-                </nav>
-              </div>
+              </cite>
+              <nav className="col-xs-12 col-sm-3">
+                <SiteLink to="/" className="work">Work</SiteLink>
+                <SiteLink to="/resume" className="resume">Resume</SiteLink>
+              </nav>
             </div>
           </div>
         </header>
