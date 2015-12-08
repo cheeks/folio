@@ -12,7 +12,7 @@ const SiteLink = React.createClass ({
     let currClass = this.props.className;
     let className = isActive ? currClass += ' active' : currClass;
     return (
-      <Link {...this.props} className={className} />
+      <Link {...this.props} />
     )
   }
 });
@@ -25,8 +25,8 @@ const App = React.createClass ({
           <div className="container">
             <div className="row">
               <cite className="col-xs-12 col-sm-6">
-                  <h1>Joshua Kanner</h1>
-                  <h2>Front-End Developer</h2>
+                <h1>Joshua Kanner</h1>
+                <h2>Front-End Developer</h2>
               </cite>
               <nav className="col-xs-12 col-sm-3">
                 <SiteLink to="/" className="work">Work</SiteLink>

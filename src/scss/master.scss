@@ -4,16 +4,20 @@ $theme-color: #63318C;
 @import 'projects';
 @import 'resume';
 
+$bg: rgba(255,255,255,1);
+$text: rgba(0,0,0,0.75);
+$text-quiet: rgba(0,0,0,0.5);
+
 body {
-	background: #eee;
+	background: $bg;
 }
 .site-header,
 .site-footer {
-	background: #333;
+	background: $bg;
 	padding: 1em 0 2em;
-  color: #fff;
+  color: $text;
   a {
-    color: #eee;
+    color: $text;
     font-size: 0.9em;
     font-weight: 300;
   }
@@ -24,6 +28,8 @@ body {
 }
 .site-header {
   text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
   @media screen and (min-width: $screen-sm-min) {
     text-align: left;
   }
@@ -34,6 +40,13 @@ body {
       margin: 2.7em 0 0;
       float: right;
       text-align: right;
+    }
+    a {
+      text-align: center;
+    }
+    a.active {
+      color: $text-quiet;
+      text-decoration: underline;
     }
     .work {
       @extend .col-xs-6;
@@ -64,7 +77,12 @@ body {
       text-transform: uppercase;
       font-weight: 300;
       letter-spacing: 1px;
-      color: rgba(255,255,255,0.75);
+      color: $text-quiet;
     }
   }
+}
+.site-footer {
+  font-size: 10px;
+  font-weight: 100;
+  color: $text-quiet;
 }

@@ -5803,7 +5803,7 @@ button.close {
   filter: blur(4px); }
   @media screen and (max-width: 767px) {
     .projects .overlay {
-      background: transparent !important;
+      background: linear-gradient(0, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 10%, transparent 50%, transparent 100%) !important;
       -webkit-filter: none; } }
   .projects .overlay::before {
     content: '';
@@ -5921,10 +5921,10 @@ section.resume {
     padding: 0; }
   section.resume ul, section.resume p {
     font-weight: 300;
-    font-size: 1.25em; }
+    font-size: 1em; }
   section.resume h1 {
     font-weight: 600;
-    font-size: 2em; }
+    font-size: 1.5em; }
   section.resume .jobs li {
     margin-bottom: 1em; }
   section.resume .portrait {
@@ -5998,16 +5998,16 @@ section.resume {
     background: rgba(191, 64, 64, 0.069); } }
 
 body {
-  background: #eee; }
+  background: white; }
 
 .site-header,
 .site-footer {
-  background: #333;
+  background: white;
   padding: 1em 0 2em;
-  color: #fff; }
+  color: rgba(0, 0, 0, 0.75); }
   .site-header a,
   .site-footer a {
-    color: #eee;
+    color: rgba(0, 0, 0, 0.75);
     font-size: 0.9em;
     font-weight: 300; }
   .site-header h1, .site-header h2,
@@ -6019,7 +6019,8 @@ body {
     font-size: 1.069em; }
 
 .site-header {
-  text-align: center; }
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   @media screen and (min-width: 768px) {
     .site-header {
       text-align: left; } }
@@ -6030,6 +6031,11 @@ body {
         margin: 2.7em 0 0;
         float: right;
         text-align: right; } }
+    .site-header nav a {
+      text-align: center; }
+    .site-header nav a.active {
+      color: rgba(0, 0, 0, 0.5);
+      text-decoration: underline; }
   .site-header cite {
     font-style: normal; }
     .site-header cite h1 {
@@ -6043,4 +6049,9 @@ body {
       text-transform: uppercase;
       font-weight: 300;
       letter-spacing: 1px;
-      color: rgba(255, 255, 255, 0.75); }
+      color: rgba(0, 0, 0, 0.5); }
+
+.site-footer {
+  font-size: 10px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.5); }
