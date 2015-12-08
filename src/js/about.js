@@ -1,10 +1,10 @@
 const React = require('react');
 
 
-const ResumePage = React.createClass ({
+const AboutPage = React.createClass ({
   render () {
     return (
-      <section className="resume">
+      <section className="about">
         <div className="container">
           <div className="row">
   {/*
@@ -17,9 +17,9 @@ const ResumePage = React.createClass ({
               <h1>Skills &amp; Tools</h1>
               <ul className="skills">
                 <li>HTML, CSS, JavaScript, Node, PHP</li>
-                <li>Browserify, ES2015, React, jQuery</li>
-                <li>SCSS, Compass, Myth, Grid Systems</li>
-                <li>Express, Socket.io</li>
+                <li>SCSS, Myth, RWD, Grid Systems</li>
+                <li>Browserify, ES2015, jQuery</li>
+                <li>Express, React, Backbone, Socket.io</li>
                 <li>MySQL, mongoDB</li>
                 <li>Gulp, Grunt</li>
               </ul>
@@ -53,4 +53,4 @@ const ResumePage = React.createClass ({
   }
 });
 
-module.exports = ResumePage;
+module.exports = AboutPage;

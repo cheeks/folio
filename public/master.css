@@ -5912,28 +5912,28 @@ button.close {
     -webkit-filter: blur(3px);
     background-size: 100%; } }
 
-section.resume {
+section.about {
   background: #fff;
   line-height: 1.5; }
-  section.resume ul {
+  section.about ul {
     margin: 0;
     list-style: none;
     padding: 0; }
-  section.resume ul, section.resume p {
+  section.about ul, section.about p {
     font-weight: 300;
     font-size: 1em; }
-  section.resume h1 {
+  section.about h1 {
     font-weight: 600;
     font-size: 1.5em; }
-  section.resume .jobs li {
+  section.about .jobs li {
     margin-bottom: 1em; }
-  section.resume .portrait {
+  section.about .portrait {
     position: relative;
     width: 80%;
     padding-top: 80%;
     border-radius: 100%;
     background: url("../images/me.jpg") 50% 50%/140% no-repeat; }
-    section.resume .portrait::before {
+    section.about .portrait::before {
       content: '';
       display: block;
       position: absolute;
@@ -5945,7 +5945,7 @@ section.resume {
       width: 100%;
       border-radius: 100%;
       background: rgba(191, 64, 64, 0.069); }
-    section.resume .portrait:hover::before, section.resume .portrait:focus::before {
+    section.about .portrait:hover::before, section.about .portrait:focus::before {
       -webkit-animation: hue 4s infinite;
       animation: hue 4s infinite; }
 

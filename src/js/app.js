@@ -2,7 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const { Router, Route, Link, History } = require('react-router');
 const ProjectGallery = require('./work');
-const ResumePage = require('./resume');
+const AboutPage = require('./about');
 const createBrowserHistory = require('history/lib/createBrowserHistory');
 
 const SiteLink = React.createClass ({
@@ -30,7 +30,7 @@ const App = React.createClass ({
               </cite>
               <nav className="col-xs-12 col-sm-3">
                 <SiteLink to="/" className="work">Work</SiteLink>
-                <SiteLink to="/resume" className="resume">Resume</SiteLink>
+                <SiteLink to="/about" className="about">About</SiteLink>
               </nav>
             </div>
           </div>
@@ -54,7 +54,7 @@ ReactDOM.render((
   <Router history={createBrowserHistory()}>
     <Route component={App}>
       <Route path="/" component={ProjectGallery} />
-      <Route path="resume" component={ResumePage} />
+      <Route path="about" component={AboutPage} />
     </Route>
   </Router>
 ), document.querySelector('#app'));
