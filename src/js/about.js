@@ -14,6 +14,9 @@ const AboutPage = React.createClass ({
   */}
             <div className="col-xs-12 col-sm-8 col-md-9 col-lg-10">
 
+              <p><a href="mailto:joshuakanner@gmail.com">email</a></p>
+              <p><a href="http://www.linkedin.com/jkanner">linkedin</a></p>
+
               <h1>Skills &amp; Tools</h1>
               <ul className="skills">
                 <li>HTML, CSS, JavaScript, Node, PHP</li>

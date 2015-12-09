@@ -14,7 +14,6 @@ body {
 .site-header,
 .site-footer {
 	background: $bg;
-	padding: 1em 0 2em;
   color: $text;
   a {
     color: $text;
@@ -28,6 +27,7 @@ body {
 }
 .site-header {
   text-align: center;
+  padding: 1em 0 2em;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 
   @media screen and (min-width: $screen-sm-min) {
@@ -82,6 +82,7 @@ body {
   }
 }
 .site-footer {
+  padding: 2em 0;
   font-size: 10px;
   font-weight: 100;
   color: $text-quiet;
