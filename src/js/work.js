@@ -34,8 +34,7 @@ const ProjectTile = React.createClass ({
     )
   },
   handleClick(e) {
-    e.preventDefault();
-    console.log('clicked', window.innerWidth);
+    // add tracking
   },
   render () {
     this.determineIfLinkable();
