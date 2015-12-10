@@ -25,7 +25,7 @@ const ProjectTile = React.createClass ({
   },
   addMobileCaption() {
     return(
-      <a href={this.props.data.url} className="caption col-xs-12 visible-xs" onClick={this.handleClick}>
+      <a href={this.props.data.url} className="caption col-xs-12 visible-xs" target="_blank" onClick={this.handleClick}>
         <div className="caption-content">
           <h2>{this.props.data.title}</h2>
           <h1>{this.props.data.client}</h1>
