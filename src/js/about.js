@@ -30,9 +30,14 @@ const AboutPage = React.createClass ({
               <h1>Experience</h1>
               <ul className="jobs">
                 <li>
+                  Freelance<br />
+                  Web Developer<br />
+                  January 2013 - Present
+                </li>
+                <li>
                   Evolution Bureau<br />
                   Sr. Interactive Developer<br />
-                  April 2012 -­ present
+                  April 2012 -­ February 2016
                 </li>
                 <li>
                   Crispin Porter + Bogusky<br />

@@ -1,5 +1,12 @@
 [
 	{
+		"client": "Twitter",
+		"title": "Awards Application",
+		"description": "Awards site with submission application, judging client, and admin app.",
+		"image": "twitter-awards3.jpg",
+		"url": "https://twitterawards.com/"
+	},
+	{
 		"client": "Noosa Yoghurt",
 		"title": "Brand Site",
 		"description": "Brand site, flavor gallery and store locator for Noosa Yoghurt.",
