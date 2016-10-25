@@ -103,5 +103,12 @@
 		"description": "A \"spot the difference\" game, video hub, and a mock tabloid blog for the online component of the After The Wildlife campaign.",
 		"image": "social-kitchen.jpg",
 		"url": ""
+	},
+	{
+		"client": "Adobe",
+		"title": "Photoshop Mystery",
+		"description": "A series of landing pages for Adobe's Photoshop Mystery.",
+		"image": "psmystery.jpg",
+		"url": ""
 	}
 ]
